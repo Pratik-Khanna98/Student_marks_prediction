@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="'login">
+        <center>
+            <form action="{{ url_for('predict')}}" method="post">
+                <h1>Enter your Study Hours to Predict Marks</h1>
+                <input align="center" type="number" name="study_hours" placeholder="study hours" required="required" width="48" height="10"/>
+                <br>
+                <br>
+
+                <!-- Show Button -->
+                <div class="button" align="center">
+                    <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Marks</strong></button>
+                </div>
+            </form>
+        </center>
+
+        <!-- Show Predicted Output Using Ml Model -->
+        <div>
+            <center>
+                <h2>{{ prediction_text }}</h2>
+            </center>
+        </div>
+
+    </div>
+</body>
+</html>
